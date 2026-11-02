@@ -1,0 +1,3 @@
+O aplicativo busca solucionar a dificuldade de controle e gerenciamento das vendas de produtos rurais, oferecendo uma alternativa simples e organizada para registrar as operações comerciais. Muitas vezes, o acompanhamento das vendas é realizado por meio de anotações manuais ou planilhas, dificultando a organização das informações, a consulta de registros anteriores e o acompanhamento do desempenho comercial.
+
+Com o aplicativo, será possível centralizar os registros de vendas, armazenando informações como cliente, produto, quantidade comercializada, valor e data da venda. Além disso, o sistema disponibilizará gráficos e indicadores mensais, permitindo visualizar os resultados e acompanhar o volume de vendas de maneira mais prática.
