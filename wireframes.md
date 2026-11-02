@@ -12,6 +12,7 @@ Wireframe AgroVende
 
 - Tela 03: Tela inicial dos valores
   
- 
+ <img width="851" height="1600" alt="image" src="https://github.com/user-attachments/assets/bb31407a-2adb-4d61-b12f-90261453e4bd" />
+
 
 
