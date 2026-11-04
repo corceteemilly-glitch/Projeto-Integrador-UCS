@@ -11,9 +11,9 @@
 
 
 
-**TECNOLOGIAS QUE SERÃO UTILIZADAS:**
+**TECNOLOGIAS:**
 
-- Dart 
+- Linguagem Dart 
 - SQL (SQLite)
 
 - [docs/apk.md](docs/apk.md)
@@ -21,14 +21,17 @@
 
 
 
-**WIREFRAME:**
+**WIREFRAME DO APP:**
+
   O aplicativo consta com telas de login, telas de dados de faturamento, além de telas para a visualização e cadastro de clientes e produtos. Telas em alta definição: [docs/wireframe.md](docs/wireframe.md)
 
 
 
 **BANCO DE DADOS:**
 
--[docs/modelagem-banco-de-dados.md](docs/modelagem-banco-dados.md)
+  O aplicativo AgroVende utilizará o SQLite como banco de dados local. Dessa forma, as informações ficarão armazenadas diretamente no celular, permitindo o uso do mesmo aplicativo sem conexão com a internet.
+
+-[docs/modelagem-banco-de-dados.md](docs/modelagem-banco-de-dados.md)
 
 -[docs/banco-de-dados0local.md](docs/banco-de-dados-local.md)
 
