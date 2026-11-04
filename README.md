@@ -29,7 +29,8 @@
 **BANCO DE DADOS:**
 
 -[docs/modelagem-banco-de-dados.md](docs/modelagem-banco-dados.md)
-[docs/banco-de-dados0local.md](docs/banco-de-dados0local.md)
+
+-[docs/banco-de-dados0local.md](docs/banco-de-dados0local.md)
 
 
 
