@@ -18,3 +18,4 @@ Integrantes:
 - MONIQUE CRISTINA LEÃO ALVES
 - LUCCAS FAGUNDES DE SOUZA
 
+docs/apk.md 
