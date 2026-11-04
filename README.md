@@ -20,4 +20,4 @@ Integrantes:
 
 - [docs/apk.md](docs/apk.md)
 
-- [docs/wireframes.md](docs/wireframes.md) 
+- [wireframes.md](wireframes.md) 
