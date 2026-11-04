@@ -1,7 +1,7 @@
 # Projeto-Integrador-UCS
 **Criação de aplicativo mobile para a venda de produtos rurais.**
 
-  O Objetivo do aplicativo AgroVende é facilitar o registro e o acompanhamento de vendas de produtos rurais. A proposta é oferecer uma ferramenta simples e prática para vendedores e empresas do setor agrícola, permitindo organizar informações comerciais e acompanhar o desempenho das vendas. O sistema permitirá registrar vendas informando o cliente, a quantidade de produtos comercializados e o valor da venda. Além disso, contará com um painel de indicadores gráficos para visualizar os resultados mensais, acompanhar quantidades vendidas e analisar o desempenho comercial. [docs/problema-e-oublico-alvo.md](docs/problema-e-publico-alvo)
+  O Objetivo do aplicativo AgroVende é facilitar o registro e o acompanhamento de vendas de produtos rurais. A proposta é oferecer uma ferramenta simples e prática para vendedores e empresas do setor agrícola, permitindo organizar informações comerciais e acompanhar o desempenho das vendas. O sistema permitirá registrar vendas informando o cliente, a quantidade de produtos comercializados e o valor da venda. Além disso, contará com um painel de indicadores gráficos para visualizar os resultados mensais, acompanhar quantidades vendidas e analisar o desempenho comercial. [docs/problema-e-oublico-alvo.md](docs/problema-e-publico-alvo.md)
 
 
   **FUNCIONALIDADES:**
@@ -13,7 +13,8 @@
 
 
 - [docs/apk.md](docs/apk.md)
-[Tecnologias](docs/tecnologias.md
+- [docs/tecnologias.md](docs/tecnologias.md)
+
 
 **WIREFRAME:**
   O aplicativo consta com telas de login, telas de dados de faturamento, além de telas para a visualização e cadastro de clientes e produtos. Telas em alta definição: [docs/wireframe.md](docs/wireframe.md)
@@ -21,7 +22,8 @@
 
 **BANCO DE DADOS:**
 
-[Modelagem do Banco de Dados](docs/modelagem-banco-dados.md)
+-[docs/modelagem-banco-de-dados.md](docs/modelagem-banco-dados.md)
+[docs/banco-de-dados0local.md](docs/banco-de-dados0local.md)
 
 **INTEGRANTES:**
 - ANDERSON VANZETTO
