@@ -1,47 +1,96 @@
 # Projeto-Integrador-VI-B
+
 **Criação de aplicativo mobile para a venda de produtos rurais.**
 
-  O Objetivo do aplicativo AgroVende é facilitar o registro e o acompanhamento de vendas de produtos rurais. A proposta é oferecer uma ferramenta simples e prática para vendedores e empresas do setor agrícola, permitindo organizar informações comerciais e acompanhar o desempenho das vendas. O sistema permitirá registrar vendas informando o cliente, a quantidade de produtos comercializados e o valor da venda. Além disso, contará com um painel de indicadores gráficos para visualizar os resultados mensais, acompanhar quantidades vendidas e analisar o desempenho comercial. [docs/problema-e-oublico-alvo.md](docs/problema-e-publico-alvo.md)
+O objetivo do aplicativo AgroVende é facilitar o registro e o acompanhamento de vendas de produtos rurais. A proposta é oferecer uma ferramenta simples e prática para vendedores e empresas do setor agrícola, permitindo organizar informações comerciais e acompanhar o desempenho das vendas.
+
+O sistema permite registrar vendas informando o cliente, o produto, a quantidade comercializada e o valor da venda. Além disso, conta com um painel de indicadores gráficos para acompanhar o faturamento e analisar o desempenho comercial.
+
+[docs/problema-e-publico-alvo.md](docs/problema-e-publico-alvo.md)
 
 
+**FUNCIONALIDADES:**
 
-  **FUNCIONALIDADES:**
+- Tela de acesso e integrantes do projeto;
+- Cadastro e visualização de produtos;
+- Cadastro e visualização de clientes;
+- Registro e histórico de vendas;
+- Detalhamento das vendas;
+- Exibição de indicadores de faturamento.
 
-  O aplicativo apresenta funcionalidades de cadastro de produtos e clientes, histórico de vendas e exibição de faturamento: [docs/funcionalidades.md](docs/funcionalidades.md)
-
+[docs/funcionalidades.md](docs/funcionalidades.md)
 
 
 **TECNOLOGIAS:**
 
-- Linguagem Dart 
+- Flutter
+- Linguagem Dart
 - SQL (SQLite)
+- Biblioteca sqflite
+- Visual Studio Code
+- Android Studio
 
-- [docs/apk.md](docs/apk.md)
-- [docs/tecnologias.md](docs/tecnologias.md)
-
+[docs/tecnologias.md](docs/tecnologias.md)
 
 
 **WIREFRAME DO APP:**
 
-  O aplicativo consta com telas de login, telas de dados de faturamento, além de telas para a visualização e cadastro de clientes e produtos. Telas em alta definição: [docs/wireframe.md](docs/wireframe.md)
+O aplicativo possui telas de login, integrantes, dados de faturamento, registro e histórico de vendas, além de telas para visualização e cadastro de clientes e produtos.
 
+Telas em alta definição: [docs/wireframe.md](docs/wireframe.md)
 
 
 **BANCO DE DADOS:**
 
-  O aplicativo AgroVende utilizará o SQLite como banco de dados local. Dessa forma, as informações ficarão armazenadas diretamente no celular, permitindo o uso do mesmo aplicativo sem conexão com a internet.
+O aplicativo AgroVende utiliza o SQLite como banco de dados local. Dessa forma, as informações ficam armazenadas diretamente no celular, permitindo a utilização do aplicativo sem conexão com a internet.
 
--[docs/modelagem-banco-de-dados.md](docs/modelagem-banco-de-dados.md)
+O banco de dados é composto por quatro tabelas: usuário, cliente, produto e venda. Todas possuem no mínimo três colunas, sendo que a tabela de venda possui relacionamento com as demais tabelas.
 
--[docs/banco-de-dados0local.md](docs/banco-de-dados-local.md)
+- [docs/modelagem-banco-de-dados.md](docs/modelagem-banco-de-dados.md)
+- [docs/banco-de-dados-local.md](docs/banco-de-dados-local.md)
 
+
+**CÓDIGO-FONTE:**
+
+O código-fonte está disponível na pasta [meu_agro_venda](meu_agro_venda).
+
+- `lib/main.dart`: inicialização, tela de acesso e integrantes;
+- `lib/banco.dart`: criação e gerenciamento do banco de dados;
+- `lib/telas.dart`: implementação das demais telas;
+- `pubspec.yaml`: dependências do aplicativo.
+
+Para executar o projeto, é necessário ter o Flutter SDK e o ambiente Android configurados.
+
+Na pasta `meu_agro_venda`, executar os comandos:
+
+    flutter pub get
+    flutter run
+
+
+**APK:**
+
+O aplicativo foi compilado e testado no emulador Android, incluindo testes de cadastro.
+
+O arquivo APK está disponível para download:
+
+- [Download do AgroVende.apk](https://github.com/corceteemilly-glitch/Projeto-Integrador-UCS/releases)
+- [docs/apk.md](docs/apk.md)
+
+**Dados de acesso para teste:**
+
+- Usuário: admin
+- Senha: 123456
+
+
+**VÍDEO DEMONSTRATIVO:**
+
+Link do vídeo no YouTube: aguardando publicação.
 
 
 **INTEGRANTES:**
+
 - ANDERSON VANZETTO
 - EMILLY CORCETE DOS SANTOS
 - FRANCIELE TERNES KUSSLER
 - MONIQUE CRISTINA LEÃO ALVES
 - LUCCAS FAGUNDES DE SOUZA
-
-
