@@ -4,7 +4,6 @@
 
 - Flutter SDK;
 - Android Studio com Android SDK;
-- Visual Studio Code com as extensões Flutter e Dart;
 - Git;
 - Emulador Android ou dispositivo Android físico.
 
@@ -22,16 +21,16 @@ Acesse a pasta do aplicativo:
 cd Projeto-Integrador-UCS/meu_agro_venda
 ```
 
-## 3. Instalar as dependências
-
-```bash
-flutter pub get
-```
-
-## 4. Verificar o ambiente
+## 3. Verificar o ambiente
 
 ```bash
 flutter doctor
+```
+
+## 4. Instalar as dependências
+
+```bash
+flutter pub get
 ```
 
 ## 5. Executar o aplicativo
@@ -74,10 +73,4 @@ O arquivo será gerado no seguinte caminho:
 
 Também é possível instalar o aplicativo em um dispositivo Android compatível, sem configurar o ambiente de desenvolvimento.
 
-O APK está disponível na seção [Releases](https://github.com/corceteemilly-glitch/Projeto-Integrador-UCS/releases).
-
-- [Funcionalidades](docs/funcionalidades.md)
-- [Tecnologias utilizadas](docs/tecnologias.md)
-- [Banco de dados local](docs/banco-de-dados-local.md)
-- [Modelagem do banco de dados](docs/modelagem-banco-de-dados.md)
-- [Geração do APK](docs/apk.md)
+O APK está disponível para download na seção [Releases](https://github.com/corceteemilly-glitch/Projeto-Integrador-UCS/releases).
