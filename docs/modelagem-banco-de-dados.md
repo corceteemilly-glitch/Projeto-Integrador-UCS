@@ -68,26 +68,26 @@ erDiagram
 
 ### `produto`
 
-| Coluna           | Tipo    | Restrições                     |
-|------------------|---------|--------------------------------|
-| `id_produto`     | INTEGER | PK, AUTOINCREMENT              |
-| `nome`           | TEXT    | NOT NULL, UNIQUE               |
-| `descricao`      | TEXT    | Opcional                       |
-| `valor_unitario` | REAL    | NOT NULL, CHECK (>= 0)         |
-| `unidade_medida` | TEXT    | NOT NULL (kg, und, duzia...)   |
+| Coluna           | Tipo    | Restrições                    |
+|------------------|---------|-------------------------------|
+| `id_produto`     | INTEGER | PK, AUTOINCREMENT             |
+| `nome`           | TEXT    | NOT NULL, UNIQUE              |
+| `descricao`      | TEXT    | Opcional                      |
+| `valor_unitario` | REAL    | NOT NULL, CHECK (>= 0)        |
+| `unidade_medida` | TEXT    | NOT NULL (kg, und, duzia...)  |
 
 ### `venda`
 
-| Coluna           | Tipo    | Restrições                              |
-|------------------|---------|-----------------------------------------|
-| `id_venda`       | INTEGER | PK, AUTOINCREMENT                       |
-| `id_cliente`     | INTEGER | NOT NULL, FK → `cliente.id_cliente`     |
-| `id_produto`     | INTEGER | NOT NULL, FK → `produto.id_produto`     |
-| `id_usuario`     | INTEGER | NOT NULL, FK → `usuario.id_usuario`     |
-| `quantidade`     | REAL    | NOT NULL, CHECK (> 0)                   |
-| `valor_unitario` | REAL    | NOT NULL, CHECK (>= 0)                  |
-| `valor_total`    | REAL    | NOT NULL, CHECK (>= 0)                  |
-| `data_venda`     | TEXT    | NOT NULL (formato AAAA-MM-DD)           |
+| Coluna           | Tipo    | Restrições                          |
+|------------------|---------|-------------------------------------|
+| `id_venda`       | INTEGER | PK, AUTOINCREMENT                   |
+| `id_cliente`     | INTEGER | NOT NULL, FK → `cliente.id_cliente` |
+| `id_produto`     | INTEGER | NOT NULL, FK → `produto.id_produto` |
+| `id_usuario`     | INTEGER | NOT NULL, FK → `usuario.id_usuario` |
+| `quantidade`     | REAL    | NOT NULL, CHECK (> 0)               |
+| `valor_unitario` | REAL    | NOT NULL, CHECK (>= 0)              |
+| `valor_total`    | REAL    | NOT NULL, CHECK (>= 0)              |
+| `data_venda`     | TEXT    | NOT NULL (formato AAAA-MM-DD)       |
 
 ## Relacionamentos
 
@@ -137,3 +137,11 @@ CREATE TABLE venda (
     FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario)
 );
 ```
+
+## Implementação
+
+A estrutura apresentada neste documento foi implementada no aplicativo AgroVende utilizando SQLite e a biblioteca sqflite.
+
+O banco de dados é criado automaticamente pelo aplicativo. As informações ficam armazenadas localmente no dispositivo, permitindo a utilização do aplicativo sem conexão com a internet.
+
+O código de implementação está disponível em [banco.dart](../meu_agro_venda/lib/banco.dart).
