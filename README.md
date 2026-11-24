@@ -86,6 +86,10 @@ O arquivo APK está disponível para download:
 
 Link do vídeo no YouTube: aguardando publicação.
 
+**INSTRUÇÕES DE EXECUÇÃO:**
+
+O passo a passo para configurar e executar o aplicativo em outro computador está disponível em [Instruções de execução](EXECUTAR.md).
+
 
 **INTEGRANTES:**
 
