@@ -76,8 +76,6 @@ Também é possível instalar o aplicativo em um dispositivo Android compatível
 
 O APK está disponível na seção [Releases](https://github.com/corceteemilly-glitch/Projeto-Integrador-UCS/releases).
 
-## Documentação complementar
-
 - [Funcionalidades](docs/funcionalidades.md)
 - [Tecnologias utilizadas](docs/tecnologias.md)
 - [Banco de dados local](docs/banco-de-dados-local.md)
