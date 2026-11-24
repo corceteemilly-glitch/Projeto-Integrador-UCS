@@ -84,7 +84,7 @@ O arquivo APK está disponível para download:
 
 **VÍDEO DEMONSTRATIVO:**
 
-Link do vídeo no YouTube: 
+Link do vídeo no YouTube: https://youtu.be/9HatKOYIe2o
 
 **INSTRUÇÕES DE EXECUÇÃO:**
 
