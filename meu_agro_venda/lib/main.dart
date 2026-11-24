@@ -1,5 +1,11 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
+import 'package:sqflite/sqflite.dart';
+import 'package:sqflite_common_ffi_web/sqflite_ffi_web.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'banco.dart';
+import 'telas.dart';
 
 const Color verdePrincipal = Color(0xFF006332);
 const Color verdeEscuro = Color(0xFF145D35);
@@ -8,6 +14,8 @@ const Color bordaVerde = Color(0xFFE1EAE1);
 const Color amareloPrincipal = Color(0xFFFFC629);
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  if (kIsWeb) databaseFactory = databaseFactoryFfiWeb;
   runApp(const AplicativoAgroVende());
 }
 
@@ -77,6 +85,29 @@ class _TelaInicialState extends State<TelaInicial> {
 
   bool lembrarMe = true;
   bool mostrarSenha = false;
+  bool entrando = false;
+  @override
+  void initState() {
+    super.initState();
+    SharedPreferences.getInstance().then((p) {
+      if (!mounted) return;
+      setState(() { controladorUsuario.text = p.getString('login') ?? ''; lembrarMe = p.getBool('lembrar') ?? true; });
+    });
+  }
+  Future<void> entrar() async {
+    setState(() => entrando = true);
+    try {
+      final id = await Banco.instancia.entrar(controladorUsuario.text, controladorSenha.text);
+      if (!mounted) return;
+      if (id == null) { ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Usuário ou senha inválidos.'))); return; }
+      final p = await SharedPreferences.getInstance();
+      await p.setBool('lembrar', lembrarMe);
+      if (lembrarMe) { await p.setString('login', controladorUsuario.text.trim()); } else { await p.remove('login'); }
+      if (!mounted) return;
+      Navigator.push(context, MaterialPageRoute(builder: (_) => TelaIntegrantes(usuarioId: id)));
+    } catch (e) { if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Erro ao acessar: $e'))); }
+    finally { if (mounted) setState(() => entrando = false); }
+  }
 
   @override
   void dispose() {
@@ -219,15 +250,7 @@ class _TelaInicialState extends State<TelaInicial> {
                               width: double.infinity,
                               height: 37,
                               child: ElevatedButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          const TelaIntegrantes(),
-                                    ),
-                                  );
-                                },
+                                onPressed: entrando ? null : entrar,
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: verdePrincipal,
                                   foregroundColor: Colors.white,
@@ -360,7 +383,8 @@ class _TelaInicialState extends State<TelaInicial> {
 // TELA 2 - INTEGRANTES DO PROJETO
 
 class TelaIntegrantes extends StatelessWidget {
-  const TelaIntegrantes({super.key});
+  final int? usuarioId;
+  const TelaIntegrantes({super.key, this.usuarioId});
 
   static const List<String> integrantes = [
     'ANDERSON VANZETTO',
@@ -502,7 +526,7 @@ class TelaIntegrantes extends StatelessWidget {
                             height: 34,
                             child: ElevatedButton(
                               onPressed: () {
-                                Navigator.pop(context);
+                                if (usuarioId == null) { Navigator.pop(context); } else { Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_) => Painel(usuarioId: usuarioId!)), (route) => route.isFirst); }
                               },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: verdePrincipal,
